@@ -1,0 +1,119 @@
+body {
+  font-family: 'Arial', sans-serif;
+  padding: 0;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: white !important;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.animate {
+
+  animation-name: animate;
+
+  /* durcation in which animation will complete */
+  animation-duration: 6s;
+
+  /* animation start after delay secondss */
+  animation-delay: 2s;
+
+  /* speed */
+  animation-timing-function: ease;
+
+  /* number of animation will repeat  */
+  animation-iteration-count: infinite;
+
+  /* animation-direction: alternate-reverse; */
+}
+
+@keyframes animate {
+  0% {
+    background-image: url('https://wallpaperaccess.com/full/5651990.jpg');
+    width: screen;
+    height: screen;
+  }
+
+
+  50% {
+    background-image: url('https://wallpaperaccess.com/full/5652006.jpg');
+    width: screen;
+    height: screen;
+  }
+
+
+  100% {
+    background-image: url('https://wallpaperaccess.com/full/5652030.jpg');
+    width: screen;
+    height: screen;
+  }
+}
+#about{
+  background-color: #ACD3A8;
+}
+.intro {
+  padding-top: 300px;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.cardd{
+  background-color: white;
+  color: black;
+  width: fit-content;
+  padding:20px 20px;
+  margin: 10px 10px;
+}
+
+#skills{
+  background-color: #ACD3A8;
+  margin-top: 1px;
+}
+.image > li{
+display: flex;
+flex-flow: row;
+gap: 8px;
+}
+
+#project{
+  background-color: #ACD3A8;
+  margin-top: 1px;
+}
+
+.btn{
+  background-color: teal;
+  color: white;
+}
+.btn:hover{
+  background-color: black;
+  color: white;
+}
+.card-title{
+  font-size: 30px;
+  font-weight:bold;
+}
+@media (min-width: 768px) {
+.reverse{
+  display: flex;
+  flex-direction: row-reverse;
+}
+}
+.date{
+  font-size: x-large;
+  font-weight: bold;
+  background-color: rgb(78, 0, 78);
+  border-radius: 10px;
+  height: fit-content;
+  padding:5px 10px;
+  width: fit-content;
+color: white;
+}
+
+#contact{
+  background-color: #ACD3A8;
+  margin-top: 1px;
+}

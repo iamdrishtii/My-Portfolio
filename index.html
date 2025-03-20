@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="icon" href="./images/logo.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll(".nav-link");
+
+            function updateActiveLink() {
+                const scrollPosition = window.scrollY;
+
+                navLinks.forEach((link) => {
+                    const section = document.querySelector(link.getAttribute("href"));
+                    if (
+                        section.offsetTop <= scrollPosition + 100 &&
+                        section.offsetTop + section.offsetHeight > scrollPosition + 100
+                    ) {
+                        navLinks.forEach((nav) => nav.classList.remove("active"));
+                        link.classList.add("active");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", updateActiveLink);
+            updateActiveLink();
+        });
+
+
+    </script>
+    
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark text-white fixed-top opacity-90 text-xl lg:text-2xl">
+        <div class="container">
+            <img src="./images/logo.jpg" alt="" height="100px" width="100px">
+
+            <!-- Hamburger Button for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#responsive-navbar-nav" aria-controls="responsive-navbar-nav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links (Collapsed on Mobile) -->
+            <div class="collapse navbar-collapse" id="responsive-navbar-nav">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#home">
+                            <p data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Home</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">
+                            <p data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">About</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">
+                            <p data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Skills</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#project">
+                            <p data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Projects</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">
+                            <p data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Contact</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="text-center text-white h-screen bg-gray-100 animate">
+        <div class="container">
+            <h1 class="text-3xl font-bold "></h1>
+            <p class="intro text-5xl sm:text-7xl ">
+                Hii, I am <br>
+                Drishti👋
+            <p class="text-2xl md:text-3xl mt-4">Web developer</p>
+            </p>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class=" h-fit pt-3">
+        <div class="container">
+            <h2 class="text-4xl sm:text-5xl pt-4  font-bold text-center ">About Me</h2>
+            <div class="mt-3 pt-1 lg:flex lg:flex-row">
+                <div class="lg:w-1/2 lg:mt-16 bg-white"><img src="./images/laptop.jpeg" alt=""></div>
+                <div class="lg:w-1/2 lg:mt-16 p-4 sm:p-20  md:text-lg bg-white">I did Graduation in
+                    Biotechnology and persued my career in Full Stack Web Development at AlmaBetter.
+                    Currently, I'm a Web Developer in building user-friendly Web Applications and learner, born and
+                    brought up in Gurugram, Haryana. Proficient
+                    in ReactJS, Next.js, Redux, and TailwindCSS, With JavaScript and modern front-end technologies, I
+                    enjoy turning innovative ideas into interactive solutions. <br> <br>
+
+                    In my recent projects, including the Guardians of Wildlife ,Energico Website and my LeaderBoard
+                    Website , I have
+                    demonstrated my skills in dynamic web design, API integration, and problem-solving. <br> <br>
+
+                    I’m always eager to learn and adapt to new challenges, aiming to contribute to impactful and
+                    engaging digital
+                    experiences. <br><br>
+
+                    <a href="#contact"><button
+                            class="border-2 border-red-400 rounded-md py-1 px-2 bg-white text-red-400 mx-2 mt-2">Let's
+                            Talk</button></a>
+                    <a href="./resume/resume.pdf" target="_blank"><button
+                            class="border-2 border-green-400 rounded-md py-1 px-2 bg-white text-green-400 mx-2 mt-2">My
+                            Resume</button></a>
+                    <a href="https://x.com/iam__drishtiii" target="_blank"><button
+                            class="border-2 border-black rounded-md py-1 px-2  bg-white text-black mx-2 mt-2">Twitter</button></a>
+                    <a href="https://github.com/iamdrishtii" target="_blank"><button
+                            class="border-2 border-gray-400 rounded-md py-1 px-2  bg-white text-gray-600 mx-2 mt-2">GitHub</button></a>
+                    <a href="https://www.linkedin.com/in/drishti-3b6629250/" target="_blank"><button
+                            class="border-2 border-blue-400 rounded-md py-1 px-2 bg-white text-blue-400 mx-2 mt-2">LinkedIn</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class=" py-3">
+        <h2 class="text-4xl sm:text-5xl py-4 font-bold text-center">Skills</h2>
+        <div class="mt-3 pt-1 text-center flex flex-wrap flex justify-center lg:px-10 ">
+
+            <div class="cardd">
+                <h1 class="text-3xl border-b-2 border-black w-fit space-y-2 mb-4">Framework</h1>
+                <ul class="text-2xl space-y-6 image">
+                    <li><img src="https://static-00.iconduck.com/assets.00/material-ui-icon-2048x1626-on580ia9.png"
+                            alt="" height="40px" width="40px">Material UI</li>
+                    <li><img src="https://www.react-bootstrap.cn/img/logo.png" alt="" height="40px" width="40px">React
+                        BootStrap</li>
+                    <li><img src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/logos/tailwind-logo.png"
+                            alt="" height="40px" width="40px">TailwindCSS</li>
+                    <li><img src="https://www.wizcase.com/wp-content/uploads/2022/02/en-bootstrap-logo.jpg" alt=""
+                            height="40px" width="40px">bootstrap</li>
+                </ul>
+            </div>
+            <div class="cardd">
+                <h1 class="text-3xl border-b-2 border-black w-fit space-y-2 mb-4">Hosting Platform</h1>
+                <ul class="text-2xl space-y-6 image">
+                    <li><img src="https://pngimg.com/uploads/github/github_PNG80.png" alt="" height="40px"
+                            width="40px">GitHub</li>
+                    <li><img src="https://cdn.freebiesupply.com/logos/large/2x/netlify-logo-png-transparent.png" alt=""
+                            height="40px" width="40px">Netlify</li>
+                    <li><img src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3205024/logo-vercel-icon-md.png"
+                            alt="" height="40px" width="40px">Vercel</li>
+                </ul>
+            </div>
+            <div class="cardd">
+                <h1 class="text-3xl border-b-2 border-black w-fit space-y-2 mb-4">Scripting Languages</h1>
+                <ul class="text-2xl space-y-6 image">
+                    <li><img src="https://images.freeimages.com/fic/images/icons/2804/plex/512/html5.png" alt=""
+                            height="40px" width="40px">HTML5</li>
+                    <li><img src="https://cdn.freebiesupply.com/logos/large/2x/css3-logo-png-transparent.png" alt=""
+                            height="40px" width="40px">CSS3</li>
+                    <li><img src="https://static-00.iconduck.com/assets.00/react-icon-1024x911-mxapchg4.png" alt=""
+                            height="40px" width="40px">React</li>
+                    <li><img src="https://images.icon-icons.com/2415/PNG/512/redux_original_logo_icon_146365.png" alt=""
+                            height="40px" width="40px">Redux</li>
+                    <li><img src="https://www.vhv.rs/dpng/d/456-4562295_library-of-javascript-icon-graphic-freeuse-png-files.png"
+                            alt="" height="40px" width="40px">JavaScript</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- project Section -->
+    <section id="project" class="  py-3 h-fit bg-gray-100">
+        <div class="container pt-1">
+            <h2 class="text-4xl sm:text-5xl py-4   font-bold text-center">Project</h2>
+            <div class="row mt-4">
+
+
+                <div class="flex flex-wrap mt-4">
+                    <div class="md:w-4/12 flex justify-center md:mt-24">
+                        <p class="date">11 March 2025</p>
+                    </div>
+                    <div class="card md:w-7/12">
+                        <img src="./images/wildlife.png" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Guardians of Wildlife</h5>
+                            <p class="card-text">
+                                <button class="accordian w-full btn text-2xl text-white py-1 my-2" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#responsive-accordian"
+                                    aria-controls="responsive-accordian" aria-label="Toggle navigation">
+                                    <span class="accordian-toggler-icon"> Project Details</span>
+                                </button>
+                            <div class="collapse accordian-collapse" id="responsive-accordian">
+                                <p class="accordian ms-auto ">
+                                <p data-bs-toggle="collapse" data-bs-target=".accordian-collapse.show">
+                                <p><strong>Description:</strong>Guardian of Wildlife is a website dedicated to raising
+                                    awareness about wildlife conservation and providing resources for individuals and
+                                    organizations to take action. </p> <br>
+                                <p><strong>Features:</strong>
+                                    <li>Information on endangered species and conservation efforts</li>
+                                    <li>Interactive maps showing wildlife habitats</li>
+                                    <li>Blog with news and updates on conservation projects</li>
+                                    <li>Donation and volunteer opportunities</li>
+                                    <li>Community forum for wildlife enthusiasts</li>
+                                </p> <br>
+                                <p><strong>Tech used:</strong> <br>
+                                <ul class="space-y-2 image">
+                                    <li><img src="https://images.freeimages.com/fic/images/icons/2804/plex/512/html5.png"
+                                            alt="" height="30px" width="30px">HTML5</li>
+                                    <li><img src="https://cdn.freebiesupply.com/logos/large/2x/css3-logo-png-transparent.png"
+                                            alt="" height="30px" width="30px">CSS3</li>
+                                    <li><img src="https://static-00.iconduck.com/assets.00/react-icon-1024x911-mxapchg4.png"
+                                            alt="" height="30px" width="30px">React</li>
+                                    <li><img src="https://images.icon-icons.com/2415/PNG/512/redux_original_logo_icon_146365.png"
+                                            alt="" height="30px" width="30px">Redux</li>
+                                    <li><img src="https://www.vhv.rs/dpng/d/456-4562295_library-of-javascript-icon-graphic-freeuse-png-files.png"
+                                            alt="" height="30px" width="30px">JavaScript</li>
+                                    <li><img src="https://logospng.org/download/vite-js/vite-js-4096-logo.png" alt=""
+                                            height="30px" width="30px">Vite</li>
+                                </ul>
+                                </p>
+                                </p>
+                                </p>
+                            </div>
+                            </p>
+                            <a href="https://github.com/iamdrishtii/Guardian-of-Wildlife" target="_blank" class="btn">
+                                Source Code</a>
+                            <a href="https://guardians-of-wildlife.netlify.app/" target="_blank" class="btn">See
+                                Link</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="flex flex-wrap mt-4 reverse">
+                    <div class="md:w-4/12  flex justify-center md:mt-24">
+                        <p class="date">27 November 2024</p>
+                    </div>
+                    <div class="card md:w-7/12">
+                        <img src="./images/energico.png" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Energico</h5>
+                            <p class="card-text">
+                                <button class="accordi w-full btn text-2xl text-white py-1 my-2" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#responsive-accordi"
+                                    aria-controls="responsive-accordi" aria-label="Toggle navigation">
+                                    <span class="accordian-toggler-icon"> Project Details</span>
+                                </button>
+                            <div class="collapse accordi-collapse" id="responsive-accordi">
+                                <p class="accordi ms-auto ">
+                                <p data-bs-toggle="collapse" data-bs-target=".accordi-collapse.show">
+
+                                <p><strong>Description:</strong> Energico is a dedicated platform offering professional
+                                    gardening services to bring your outdoor spaces to life. With a deep-rooted passion
+                                    for garden care, their expert team provides personalized solutions to nurture and
+                                    enhance your garden, ensuring it thrives beautifully in every season.
+                                </p> <br>
+                                <p><strong>Features:</strong>
+                                    <li>Top Rated Exterior designing company</li>
+                                    <li>Provide Experts Advice</li>
+                                    <li>Provide best pricing Services</li>
+                                    <li>Provide your house exterior or your
+                                        landscape a unique look</li>
+
+
+                                </p> <br>
+                                <p><strong>Tech used:</strong> <br>
+                                <ul class="space-y-2 image">
+                                    <li><img src="https://images.freeimages.com/fic/images/icons/2804/plex/512/html5.png"
+                                            alt="" height="30px" width="30px">HTML5</li>
+                                    <li><img src="https://cdn.freebiesupply.com/logos/large/2x/css3-logo-png-transparent.png"
+                                            alt="" height="30px" width="30px">CSS3</li>
+                                </ul>
+                                </p>
+
+                                </p>
+                                </p>
+                            </div>
+                            </p>
+                            <a href="https://github.com/iamdrishtii/Energico-TW" target="_blank" class="btn">
+                                Source Code</a>
+                            <a href="https://iamdrishtii.github.io/Energico-TW/" target="_blank" class="btn">See
+                                Link</a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="flex flex-wrap mt-4">
+                    <div class="md:w-4/12  flex justify-center md:mt-24">
+                        <p class="date">18 February 2025</p>
+                    </div>
+                    <div class="card md:w-7/12">
+                        <img src="./images/leader.png" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Leader Board Assignment</h5>
+                            <p class="card-text">
+                                <button class="accordia w-full btn text-2xl text-white py-1 my-2" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#responsive-accordia"
+                                    aria-controls="responsive-accordia" aria-label="Toggle navigation">
+                                    <span class="accordian-toggler-icon"> Project Details</span>
+                                </button>
+                            <div class="collapse accordia-collapse" id="responsive-accordia">
+                                <p class="accordia ms-auto ">
+                                <p data-bs-toggle="collapse" data-bs-target=".accordia-collapse.show">
+                                <p><strong>Description:</strong>The Leaderboard Website is a dynamic platform designed
+                                    to display and rank users based on their achievements or scores. It provides a
+                                    competitive and engaging environment, perfect for games, contests, or productivity
+                                    tracking. </p> <br>
+                                <p><strong>Features:</strong>
+                                    <li>Dynamic ranking updates based on user scores</li>
+                                    <li>Users can submit their scores</li>
+                                    <li>Mobile-friendly interface for easy access on any device</li>
+                                    <li>Provide Popular player data</li>
+                                </p> <br>
+                                <p><strong>Tech used:</strong> <br>
+                                <ul class="space-y-2 image">
+                                    <li><img src="https://images.freeimages.com/fic/images/icons/2804/plex/512/html5.png"
+                                            alt="" height="30px" width="30px">HTML5</li>
+                                    <li><img src="https://cdn.freebiesupply.com/logos/large/2x/css3-logo-png-transparent.png"
+                                            alt="" height="30px" width="30px">CSS3</li>
+                                    <li><img src="https://www.vhv.rs/dpng/d/456-4562295_library-of-javascript-icon-graphic-freeuse-png-files.png"
+                                            alt="" height="30px" width="30px">JavaScript</li>
+                                </ul>
+                                </p>
+
+                                </p>
+                                </p>
+                            </div>
+                            </p>
+                            <a href="https://github.com/iamdrishtii/LeaderBoard" target="_blank" class="btn">
+                                Source Code</a>
+                            <a href="https://iamdrishtii-leaderboard.netlify.app/" target="_blank" class="btn">See
+                                Link</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class=" py-3 h-fit bg-gray-100 h-80">
+        <h2 class="text-4xl sm:text-5xl py-4  font-bold text-center">Contact Me</h2>
+        <p class="mt-3 pt-1 text-center text-3xl">
+            <a href="./resume/resume.pdf" target="_blank"><button
+                    class="border-2 border-green-400 rounded-md py-2 px-4 bg-white text-green-400 mx-2 mt-2">My
+                    resume</button></a>
+            <a href="https://mail.google.com/" target="_blank"><button
+                    class="border-2 border-red-400 rounded-md py-2 px-4 bg-white text-red-400 mx-2 mt-2">Email</button></a>
+            <a href="https://x.com/iam__drishtiii" target="_blank"><button
+                    class="border-2 border-black rounded-md py-2 px-4  bg-white text-black mx-2 mt-2">Twitter</button></a>
+            <a href="https://github.com/iamdrishtii" target="_blank"><button
+                    class="border-2 border-gray-400 rounded-md py-2 px-4  bg-white text-gray-600 mx-2 mt-2">GitHub</button></a>
+            <a href="https://www.linkedin.com/in/drishti-3b6629250/" target="_blank"><button
+                    class="border-2 border-blue-400 rounded-md py-2 px-4  bg-white text-blue-400 mx-2 mt-2">LinkedIn</button></a>
+        </p>
+    </section>
+
+    <footer class="py-5 text-xl bg-black text-white">
+        <p class="mt-3 text-center">&copy; 2025 Drishti | <a href="https://www.linkedin.com/in/drishti-3b6629250/"
+                target="_blank">LinkedIn</a> | <a href="https://github.com/iamdrishtii" target="_blank">GitHub</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
