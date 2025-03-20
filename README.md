@@ -1,5 +1,7 @@
-# Portfolio Website
+##  Live Link
+https://iamdrishtii.github.io/My-Portfolio/
 
+# Portfolio Website
 Welcome to my portfolio website! This project serves as a showcase of my skills, projects as a web developer.
 
 # About the Portfolio
@@ -15,9 +17,6 @@ This website is designed to display information about me, including my projects,
 ##  Technologies Used
 - **Frontend:** HTML, CSS
 - **Deployment:** GitHub
-
-##  Live Link
-
 
 Thank you for visiting my portfolio website!
 
